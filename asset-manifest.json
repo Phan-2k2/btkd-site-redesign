@@ -1,16 +1,14 @@
 {
   "files": {
     "main.css": "/btkd-site-redesign/static/css/main.073c9b0a.css",
-    "main.js": "/btkd-site-redesign/static/js/main.d6140098.js",
-    "static/js/787.eb8ec20b.chunk.js": "/btkd-site-redesign/static/js/787.eb8ec20b.chunk.js",
-    "static/media/logo.svg": "/btkd-site-redesign/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.js": "/btkd-site-redesign/static/js/main.301c7320.js",
     "index.html": "/btkd-site-redesign/index.html",
+    "static/media/testfile.md": "/btkd-site-redesign/static/media/testfile.3556f45736b7e90a28b7.md",
     "main.073c9b0a.css.map": "/btkd-site-redesign/static/css/main.073c9b0a.css.map",
-    "main.d6140098.js.map": "/btkd-site-redesign/static/js/main.d6140098.js.map",
-    "787.eb8ec20b.chunk.js.map": "/btkd-site-redesign/static/js/787.eb8ec20b.chunk.js.map"
+    "main.301c7320.js.map": "/btkd-site-redesign/static/js/main.301c7320.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d6140098.js"
+    "static/js/main.301c7320.js"
   ]
 }
