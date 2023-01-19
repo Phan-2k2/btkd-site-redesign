@@ -1,2 +1,5 @@
 # Hello! Welcome to my website :D
-![Banana](../../public/images/tempphoto.png)
+## Here's a minecraft house
+![A House](../../public/images/tempphoto.png)
+### Here's an Axolotl Aquarium
+![Axolotl Aquarium](../../public/images/announcements/axolotlaquarium.png)
