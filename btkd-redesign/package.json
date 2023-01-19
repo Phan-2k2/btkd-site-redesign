@@ -39,6 +39,14 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@iconify/react": "^4.0.1",
+    "@mui/material": "^5.11.5",
+    "gh-pages": "^4.0.0",
+    "react-router-dom": "^6.7.0",
+    "react-scroll": "^1.8.9",
+    "react-slideshow-image": "^4.1.1",
+    "react-transition-group": "^4.4.5"
   }
 }
