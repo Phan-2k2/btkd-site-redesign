@@ -1,12 +1,12 @@
 import './App.css';
 import MarkdownTest from "./components/MarkdownTest";
+import MainPage from "./components/MainPage/MainPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          <MarkdownTest/>
-      </header>
+        <MainPage/>
+        <MarkdownTest/>
     </div>
   );
 }

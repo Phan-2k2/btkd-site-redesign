@@ -1,0 +1,13 @@
+.menuDrawer{
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+#drawerButtons{
+    display: flex;
+    flex-direction: column;
+}
