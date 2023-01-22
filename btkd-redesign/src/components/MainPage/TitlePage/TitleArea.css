@@ -1,0 +1,12 @@
+#titleAreaMain{
+    height: 80vh;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-image: url("main-background-blurred2.jpg");*/
+    display: flex;
+    /*background: rgb(17,88,69);*/
+    /*background: linear-gradient(180deg, rgba(17,88,69,1) 0%, rgba(18,80,110,1) 50%, rgba(1,21,2,0) 100%);*/
+    background: rgb(42,84,112);
+    background: linear-gradient(180deg, rgba(42,84,112,1) 0%, rgba(76,65,119,1) 50%, rgba(1,21,2,0) 100%);
+}

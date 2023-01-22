@@ -1,0 +1,30 @@
+#contactArea{
+    color: white;
+    width: 80vw;
+    margin-left: 10vw;
+}
+#mediaButtons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#emailForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formEmail{
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 5px;
+}
+#formMessage{
+    width: 50%;
+    height: 100px;
+    margin: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 5px;
+}

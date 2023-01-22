@@ -1,0 +1,19 @@
+#projectsArea{
+    color: white;
+    width: 80vw;
+    margin-left: 10vw;
+}
+#projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.projectCard{
+    flex-basis: 45%;
+    padding: 10px;
+}
+.titleContent{
+    display: flex;
+    justify-content: space-between;
+}
