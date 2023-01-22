@@ -19,13 +19,13 @@ function TitleArea (props) {
                         variant="h3"
                         component="div"
                         sx={{p:2}}
-                    > <b>Hey! I'm Austin Phan</b>
+                    > <b>Welcome! We're Brown Taekwondo</b>
                         {
                             <Typography
                                 variant="h6"
                                 component="div"
                                 sx={{p:2}}
-                            > I'm glad you're here. Welcome to my UI/UX Portfolio.
+                            > We Go. We Fight. We Win.
                             </Typography>
                         }
                     </Typography>
