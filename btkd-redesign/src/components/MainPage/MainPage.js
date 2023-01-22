@@ -1,10 +1,11 @@
 import './MainPage.css';
 import NavBar from "./NavBar/NavBar";
 import AboutArea from "./AboutArea/AboutArea";
-import ProjectsArea from "./ProjectsArea/ProjectsArea";
+import AnnouncementsArea from "./ProjectsArea/AnnouncementsArea";
 import ContactArea from "./ContactArea/ContactArea";
 import {useEffect, useRef, useState} from "react";
 import TitleArea from "./TitlePage/TitleArea";
+import FooterArea from "./FooterArea/FooterArea";
 
 //https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
 export function useIsVisible(ref) {
@@ -27,20 +28,21 @@ function MainPage() {
     const isVisibleTitle = useIsVisible(titleRef);
     const aboutRef = useRef();
     const isVisibleAbout = useIsVisible(aboutRef);
-    const projectsRef = useRef();
-    const isVisibleProj = useIsVisible(projectsRef);
+    const announcementsRef = useRef();
+    const isVisibleAnnouncements = useIsVisible(announcementsRef);
     const contactsRef = useRef();
     const isVisibleContacts = useIsVisible(contactsRef);
 
   return (
     <div className="App">
-        <NavBar aboutRef={aboutRef} projectsRef={projectsRef} contactsRef={contactsRef} navbarRef={navbarRef} titleVisible={isVisibleTitle}/>
+        <NavBar navbarRef={navbarRef} titleVisible={isVisibleTitle}/>
         <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
         <AboutArea aboutRef={aboutRef} isVisible={isVisibleAbout}/>
         <hr/>
-        <ProjectsArea projectsRef={projectsRef} isVisible={isVisibleProj}/>
+        <AnnouncementsArea announcementsRef={announcementsRef} isVisible={isVisibleAnnouncements}/>
         <hr/>
         <ContactArea contactsRef={contactsRef} isVisible={isVisibleContacts}/>
+        <FooterArea/>
     </div>
   );
 }
