@@ -1,6 +1,5 @@
 import './ProjectsArea.css'
 import {Card, CardContent, CardMedia, Typography} from "@mui/material";
-import {NavLink} from "react-router-dom";
 import {useState} from "react";
 function ProjectItem (props) {
 
