@@ -1,6 +1,6 @@
 import AppBar from '@mui/material/AppBar';
 import React, {useEffect, useState} from "react";
-import {Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
+import {Box, Button, Drawer, IconButton, Menu, MenuItem, Toolbar, Typography} from "@mui/material";
 import { Icon } from '@iconify/react';
 import './Navbar.css'
 import { animateScroll as scroll} from 'react-scroll'
@@ -14,10 +14,10 @@ function NavBar (props) {
         boxShadow: "none"
     };
 
-    const [navHeight, setNavheight] = useState("10px")
+    const [navHeight, setNavHeight] = useState("10px")
 
     useEffect(()=>{
-        setNavheight(props.navbarRef.current.clientHeight/2 + "px")
+        setNavHeight(props.navbarRef.current.clientHeight/2 + "px")
     }, [props.navbarRef])
 
     // const defaultStyleSVG = {
@@ -31,6 +31,12 @@ function NavBar (props) {
         exited: {backgroundColor: "rgba(35,35,38,0)"},
     };
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleDropdownClose = () => {
+        setAnchorEl(null);
+    };
+
     const [openDrawer, setOpenDrawer] = useState(false);
     function drawerToggle () {
         if(openDrawer){
@@ -38,34 +44,6 @@ function NavBar (props) {
         } else {
             setOpenDrawer(true);
         }
-    }
-
-    function scrollHandler(type) {
-        let offset = props.navbarRef.current.clientHeight; //accounts for navbar
-        switch (type) {
-            case "about" : {
-                let yOffset = props.aboutRef.current.offsetTop;
-                scroll.scrollTo(yOffset-offset);
-                break;
-            }
-            case "projects" : {
-                let yOffset = props.projectsRef.current.offsetTop;
-                scroll.scrollTo(yOffset-offset);
-                break;
-            }
-            case "contact" : {
-                let yOffset = props.contactsRef.current.offsetTop;
-                scroll.scrollTo(yOffset-offset);
-                break;
-            }
-            default:
-                break;
-        }
-    }
-
-    function drawerClickHandler(type) {
-        drawerToggle();
-        scrollHandler(type);
     }
 
 
@@ -100,13 +78,35 @@ function NavBar (props) {
                                 Brown Taekwondo
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                <Button key="about"  onClick={() => scrollHandler("about")} sx={{ color: '#fff' }}>
-                                    About
+                                <Button key="Home"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
+                                    Home
                                 </Button>
-                                <Button key="projects"  onClick={() => scrollHandler("projects")} sx={{ color: '#fff' }}>
-                                    Projects
+                                <Button key="Gallery"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
+                                    Gallery
                                 </Button>
-                                <Button key="contact"  onClick={() => scrollHandler("contact")} sx={{ color: '#fff' }}>
+                                <Button
+                                    sx={{ color: '#fff' }}
+                                    id="dropdownButton"
+                                    onClick={(event) => {setAnchorEl(event.currentTarget);}}
+                                >
+                                    Resources
+                                </Button>
+                                <Menu
+                                    id="dropdownButton"
+                                    anchorEl={anchorEl}
+                                    open={open}
+                                    onClose={handleDropdownClose}
+                                    MenuListProps={{
+                                        'aria-labelledby': 'menuButton',
+                                    }}
+                                >
+                                    <MenuItem onClick={handleDropdownClose}>For Students</MenuItem>
+                                    <MenuItem onClick={handleDropdownClose}>For Alumni</MenuItem>
+                                </Menu>
+                                <Button key="Tournaments"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
+                                    Tournaments
+                                </Button>
+                                <Button key="Contact"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
                                     Contact
                                 </Button>
                             </Box>
@@ -130,15 +130,38 @@ function NavBar (props) {
                             {
                                 <div className="menuDrawer">
                                     <div id={"drawerButtons"}>
-                                        <Button key="about"  onClick={() => drawerClickHandler("about")}
+                                        <Button key="Home"  onClick={() => {console.log("hello!")}}
                                                 sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
-                                            About
+                                            Home
                                         </Button>
-                                        <Button key="projects" onClick={() => drawerClickHandler("projects")}
+                                        <Button key="Gallery" onClick={() => {console.log("hello!")}}
                                                 sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
-                                            Projects
+                                            Gallery
                                         </Button>
-                                        <Button key="contact" onClick={() => drawerClickHandler("contact")}
+                                        <Button
+                                            sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}
+                                            id="dropdownButton"
+                                            onClick={(event) => {setAnchorEl(event.currentTarget);}}
+                                        >
+                                            Resources
+                                        </Button>
+                                        <Menu
+                                            id="dropdownButton"
+                                            anchorEl={anchorEl}
+                                            open={open}
+                                            onClose={handleDropdownClose}
+                                            MenuListProps={{
+                                                'aria-labelledby': 'menuButton',
+                                            }}
+                                        >
+                                            <MenuItem onClick={handleDropdownClose}>For Students</MenuItem>
+                                            <MenuItem onClick={handleDropdownClose}>For Alumni</MenuItem>
+                                        </Menu>
+                                        <Button key="Tournaments"  onClick={() => {console.log("hello!")}}
+                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
+                                            Tournaments
+                                        </Button>
+                                        <Button key="Contact"  onClick={() => {console.log("hello!")}}
                                                 sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
                                             Contact
                                         </Button>
