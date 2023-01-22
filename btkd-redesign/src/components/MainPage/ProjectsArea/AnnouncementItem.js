@@ -1,4 +1,4 @@
-import './ProjectsArea.css'
+import './AnnouncementsArea.css'
 import {Card, CardContent, CardMedia, Typography} from "@mui/material";
 import {useState} from "react";
 function AnnouncementItem (props) {

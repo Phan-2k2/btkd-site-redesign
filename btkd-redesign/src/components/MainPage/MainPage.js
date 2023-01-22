@@ -33,13 +33,17 @@ function MainPage() {
     const contactsRef = useRef();
     const isVisibleContacts = useIsVisible(contactsRef);
 
+    const [announcementsText, setAnnouncementsText] = useState([]);
+
   return (
     <div className="App">
         <NavBar navbarRef={navbarRef} titleVisible={isVisibleTitle}/>
         <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
         <AboutArea aboutRef={aboutRef} isVisible={isVisibleAbout}/>
         <hr/>
-        <AnnouncementsArea announcementsRef={announcementsRef} isVisible={isVisibleAnnouncements}/>
+        <AnnouncementsArea announcementsRef={announcementsRef} isVisible={isVisibleAnnouncements}
+                           announcementsText={announcementsText} setAnnouncementsText={setAnnouncementsText}
+        />
         <hr/>
         <ContactArea contactsRef={contactsRef} isVisible={isVisibleContacts}/>
         <FooterArea/>
