@@ -1,4 +1,4 @@
-import {Grow, Typography} from "@mui/material";
+import {Button, Grow, Typography} from "@mui/material";
 import './AnnouncementsArea.css'
 import AnnouncementItem from "./AnnouncementItem";
 import announcementsFile from "../../../md/announcements.md"
@@ -73,6 +73,7 @@ function AnnouncementsArea (props) {
                             />
                         ))}
                     </div>
+                    <Button size="large" variant="text" sx={{ color: '#fff' }}>Read all announcements</Button>
                 </div>
             </Grow>
         </div>
