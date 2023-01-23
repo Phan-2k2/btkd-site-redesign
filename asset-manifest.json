@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/btkd-site-redesign/static/css/main.fe9ec786.css",
-    "main.js": "/btkd-site-redesign/static/js/main.95b220a9.js",
+    "main.css": "/btkd-site-redesign/static/css/main.4b264566.css",
+    "main.js": "/btkd-site-redesign/static/js/main.8a5f1473.js",
+    "static/media/mainbackground.jpg": "/btkd-site-redesign/static/media/mainbackground.cbb924420343fbdc8191.jpg",
+    "static/media/announcements.md": "/btkd-site-redesign/static/media/announcements.99290d1c7983b62c468b.md",
     "index.html": "/btkd-site-redesign/index.html",
-    "static/media/testfile.md": "/btkd-site-redesign/static/media/testfile.bc295cb8929c62c0547e.md",
-    "main.fe9ec786.css.map": "/btkd-site-redesign/static/css/main.fe9ec786.css.map",
-    "main.95b220a9.js.map": "/btkd-site-redesign/static/js/main.95b220a9.js.map"
+    "main.4b264566.css.map": "/btkd-site-redesign/static/css/main.4b264566.css.map",
+    "main.8a5f1473.js.map": "/btkd-site-redesign/static/js/main.8a5f1473.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe9ec786.css",
-    "static/js/main.95b220a9.js"
+    "static/css/main.4b264566.css",
+    "static/js/main.8a5f1473.js"
   ]
 }
