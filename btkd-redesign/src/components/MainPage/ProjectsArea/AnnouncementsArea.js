@@ -28,34 +28,38 @@ function AnnouncementsArea (props) {
             props.setAnnouncementsText(splitAnnouncements);
             let announcements = [];
             //max out at 4 latest announcements
-            for(let i = 0; i < 1; i++){
+            for(let i = 0; i < 4; i++){
                 // console.log(splitAnnouncements[i]);
                 let currentText = splitAnnouncements[i];
                 let indexTitle = currentText.indexOf("#");
                 let indexImage = currentText.indexOf("![");
                 let indexDate = currentText.indexOf("##");
                 let indexMessage = currentText.indexOf("#####");
-                console.log(currentText.slice(indexTitle + 2, indexImage));
-                console.log(currentText.slice(indexImage, indexDate));
-                console.log(currentText.slice(indexDate + 2, indexMessage));
-                console.log(currentText.slice(indexMessage + 5));
+
+                let title = currentText.slice(indexTitle + 2, indexImage);
+
+                let image = process.env.PUBLIC_URL;
+                if(indexImage < 0){
+                    image = image + "/images/placeholder.jpg"
+                } else {
+                    let tempImageSrc = currentText.slice(indexImage, indexDate);
+                    let publicLocation = tempImageSrc.search("/public/");
+                    console.log(tempImageSrc);
+                    let endLocation = tempImageSrc.search('\\)');
+                    let splitSrc = tempImageSrc.slice(publicLocation + 7, endLocation);
+                    image = image + splitSrc;
+                }
+
+
+                let date = currentText.slice(indexDate + 2, indexMessage);
+                let message = currentText.slice(indexMessage + 5);
+
+                let newAnnouncement = new announcement(title, date, image, message);
+                announcements.push(newAnnouncement);
             }
+            setLandingPageAnnouncements(announcements);
             // console.log(splitAnnouncements);
         })
-    }
-
-    function generateMarkdownArray() {
-        return(
-            landingPageAnnouncements.map((announcement) => {
-                return(
-                    <div className={"announcement"} key={announcement}>
-                        <ReactMarkdown children={announcement} components={{
-                            img : ({src, alt}) => <MarkdownImage imageSrc={src} alt={alt}/>
-                        }}/>
-                    </div>
-                )
-            })
-        )
     }
 
     return (
@@ -66,11 +70,11 @@ function AnnouncementsArea (props) {
                     <Typography variant="h3" sx={{}}>
                         <b>Latest Announcements</b>
                     </Typography>
-                    <div id="projects">
-                        {props.announcementsText.map((project) => (
-                            <AnnouncementItem key={project.name}
-                                              name={project.name} description={project.description} link={project.link}
-                                              thumbnail={project.thumbnail}
+                    <div id="announcements">
+                        {landingPageAnnouncements.map((announcement) => (
+                            <AnnouncementItem key={announcement.date}
+                                              name={announcement.title} description={announcement.message}
+                                              thumbnail={announcement.image}
                             />
                         ))}
                     </div>

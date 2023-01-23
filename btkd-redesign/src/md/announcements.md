@@ -1,6 +1,6 @@
 # Fall 2022 Promotional Testing
 
-![TestingPhotoFall22](../../public/images/announcements/TestingPhotoFall22.jpg)
+![TestingPhotoFall22](../../public/images/announcements/testingphotofall22.jpg)
 
 ## 12/15/2022
 
@@ -11,7 +11,7 @@ ___
 
 # Fall 2022 Promotional Testing
 
-![TestingPhotoFall22](../../public/images/announcements/TestingPhotoFall22.jpg)
+![TestingPhotoFall22](../../public/images/announcements/testingphotofall22.jpg)
 
 ## 12/15/2022
 
@@ -22,7 +22,7 @@ ___
 
 # Fall 2022 Promotional Testing
 
-![TestingPhotoFall22](../../public/images/announcements/TestingPhotoFall22.jpg)
+![TestingPhotoFall22](../../public/images/announcements/testingphotofall22.jpg)
 
 ## 12/15/2022
 
@@ -33,7 +33,7 @@ ___
 
 # Fall 2022 Promotional Testing
 
-![TestingPhotoFall22](../../public/images/announcements/TestingPhotoFall22.jpg)
+![TestingPhotoFall22](../../public/images/announcements/testingphotofall22.jpg)
 
 ## 12/15/2022
 
