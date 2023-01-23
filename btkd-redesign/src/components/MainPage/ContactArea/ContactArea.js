@@ -13,8 +13,7 @@ function ContactArea (props) {
                         <b>Contact</b>
                     </Typography>
                     <Typography variant="subtitle1" sx={{}}>
-                        Thanks for visiting my portfolio! You can find me on anywhere linked below.
-                        Click an icon to be directed to a page, or email me at <b>austin_phan@brown.edu</b>.
+                        Blah Blah Blah put something important here
                     </Typography>
                     <div id="mediaButtons">
                         <Button variant="contained" onClick={() => {window.open("https://www.linkedin.com/in/austin-d-phan/")}} sx={{background: "rgb(45, 42, 46, 0)", boxShadow: "none"}}>

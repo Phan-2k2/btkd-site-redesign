@@ -3,7 +3,7 @@
     width: 80vw;
     margin-left: 10vw;
 }
-#projects{
+#announcements{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -16,4 +16,10 @@
 .titleContent{
     display: flex;
     justify-content: space-between;
+}
+.announcementDescription {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

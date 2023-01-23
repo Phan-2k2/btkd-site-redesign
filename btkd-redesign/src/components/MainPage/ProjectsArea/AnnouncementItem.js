@@ -1,5 +1,5 @@
 import './AnnouncementsArea.css'
-import {Card, CardContent, CardMedia, Typography} from "@mui/material";
+import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 import {useState} from "react";
 function AnnouncementItem (props) {
 
@@ -26,11 +26,19 @@ function AnnouncementItem (props) {
                         <Typography gutterBottom variant="h5" component="div" sx={{color: "white"}}>
                             {props.name}
                         </Typography>
+                        <Typography gutterBottom variant="h5" component="div" sx={{color: "white"}}>
+                            {props.date}
+                        </Typography>
                     </div>
-                    <Typography variant="h6" color="text.secondary" sx={{color: "white"}}>
-                        {props.description}
-                    </Typography>
+                    <div className="announcementDescription">
+                        <Typography variant="h6" color="text.secondary" sx={{color: "white"}}>
+                            {props.description}
+                        </Typography>
+                    </div>
                 </CardContent>
+                <CardActions>
+                    <Button size="small" variant="contained" sx={{ color: '#fff' }}>Read More</Button>
+                </CardActions>
             </Card>
             {/*</NavLink>*/}
         </div>
