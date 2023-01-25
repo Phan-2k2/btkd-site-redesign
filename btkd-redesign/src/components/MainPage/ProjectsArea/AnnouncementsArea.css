@@ -12,6 +12,7 @@
 #announcementsAreaContent{
     display: flex;
     flex-direction: column;
+    overflow-wrap: break-word;
 }
 .projectCard{
     flex-basis: 45%;

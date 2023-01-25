@@ -31,7 +31,6 @@ function AnnouncementItem (props) {
 
     return(
         <div className="projectCard">
-            {/*<NavLink to={props.link} style={{textDecoration: 'none'}}>*/}
             <Card sx={{ minWidth: {xs : 0.8*width, sm : 350}, height: "100%", background: "rgba(45, 42, 46, 1)"}}>
                 <CardMedia
                     component="img"
@@ -58,22 +57,20 @@ function AnnouncementItem (props) {
                     <Button size="small" variant="contained" sx={{ color: '#fff' }} onClick={() => setModalOpen(true)}>Read More</Button>
                 </CardActions>
             </Card>
-            {/*</NavLink>*/}
             <Modal
                 open={modalOpen}
                 onClose={() => {setModalOpen(false)}}
             >
                 <Box sx={style}>
                     <div className="annModalTitle">
-                        <Typography id="modal-modal-title" variant="h5" component="h2">
+                        <Typography variant="h5" component="h2">
                             {props.name}
                         </Typography>
-                        <Typography id="modal-modal-title" variant="h5" component="h2">
+                        <Typography variant="h5" component="h2">
                             {props.date}
                         </Typography>
                     </div>
                     <img src={props.thumbnail} alt={""} style={{maxWidth: "100%"}}/>
-
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         {props.description}
                     </Typography>
