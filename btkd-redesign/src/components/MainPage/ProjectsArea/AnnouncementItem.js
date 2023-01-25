@@ -1,7 +1,22 @@
 import './AnnouncementsArea.css'
-import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
+import {Box, Button, Card, CardActions, CardContent, CardMedia, Modal, Typography} from "@mui/material";
 import {useState} from "react";
 function AnnouncementItem (props) {
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+        height: '60vh',
+        overflow: 'auto',
+        backgroundColor: 'white'
+    };
+
+    const [modalOpen, setModalOpen] = useState(false);
 
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -37,11 +52,25 @@ function AnnouncementItem (props) {
                     </div>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" variant="contained" sx={{ color: '#fff' }}>Read More</Button>
+                    <Button size="small" variant="contained" sx={{ color: '#fff' }} onClick={() => setModalOpen(true)}>Read More</Button>
                 </CardActions>
             </Card>
             {/*</NavLink>*/}
+            <Modal
+                open={modalOpen}
+                onClose={() => {setModalOpen(false)}}
+            >
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        {props.name}
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        {props.description}
+                    </Typography>
+                </Box>
+            </Modal>
         </div>
+
     )
 }
 export default AnnouncementItem;

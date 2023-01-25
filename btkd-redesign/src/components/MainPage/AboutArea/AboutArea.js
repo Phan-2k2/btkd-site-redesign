@@ -7,7 +7,7 @@ function AboutArea (props) {
 
     return(
         <div id="aboutArea" ref={props.aboutRef}>
-            <Grow in={props.isVisible} timeout={1000}>
+            <Grow in={props.isVisible} timeout={500}>
                 <div id="aboutAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>About Brown Taekwondo</b>

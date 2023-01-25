@@ -7,7 +7,7 @@ function ContactArea (props) {
 
     return (
         <div id="contactArea" ref={props.contactsRef}>
-            <Grow in={props.isVisible} timeout={1000}>
+            <Grow in={props.isVisible} timeout={500}>
                 <div id="contactAreaContent">
                     <Typography variant="h3" sx={{}}>
                         <b>Contact</b>
