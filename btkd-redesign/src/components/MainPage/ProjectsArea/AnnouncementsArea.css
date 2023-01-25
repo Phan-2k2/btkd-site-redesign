@@ -27,3 +27,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.annModalTitle {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

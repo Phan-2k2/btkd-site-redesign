@@ -48,17 +48,18 @@ function MainPage() {
 
     const [landingPageAnnouncements, setLandingPageAnnouncements] = useState([]);
 
-    useEffect(() => {fetchMarkdown()}, []);
+    useEffect(() => {fetchAnnouncementsMarkdown()}, []);
 
-    function fetchMarkdown () {
+    function fetchAnnouncementsMarkdown () {
         console.log("help")
         fetch(announcementsFile).then((response) => response.text()).then((text) => {
             //first split by announcements
             let splitAnnouncements = text.split("___");
             setAnnouncementsText(splitAnnouncements);
+
+            //area for handling announcements formatting for main page
             let announcements = [];
-            //max out at 4 latest announcements
-            for(let i = 0; i < 2; i++){
+            for(let i = 0; i < 4; i++){
                 let currentText = splitAnnouncements[i];
                 let indexTitle = currentText.indexOf("#");
                 let indexImage = currentText.indexOf("![");

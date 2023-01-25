@@ -9,11 +9,14 @@ function AnnouncementItem (props) {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         border: '2px solid #000',
+        borderRadius: "10px",
         boxShadow: 24,
         p: 4,
-        height: '60vh',
+        maxHeight: '60vh',
+        maxWidth: '80vh',
         overflow: 'auto',
-        backgroundColor: 'white'
+        backgroundColor: '#2d2a2e',
+        color: 'white'
     };
 
     const [modalOpen, setModalOpen] = useState(false);
@@ -61,9 +64,16 @@ function AnnouncementItem (props) {
                 onClose={() => {setModalOpen(false)}}
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        {props.name}
-                    </Typography>
+                    <div className="annModalTitle">
+                        <Typography id="modal-modal-title" variant="h5" component="h2">
+                            {props.name}
+                        </Typography>
+                        <Typography id="modal-modal-title" variant="h5" component="h2">
+                            {props.date}
+                        </Typography>
+                    </div>
+                    <img src={props.thumbnail} alt={""} style={{maxWidth: "100%"}}/>
+
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                         {props.description}
                     </Typography>
