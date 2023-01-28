@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react';
 import './Navbar.css'
 import { animateScroll as scroll} from 'react-scroll'
 import {Transition} from "react-transition-group";
+import {NavLink} from "react-router-dom";
 
 function NavBar (props) {
 
@@ -78,12 +79,16 @@ function NavBar (props) {
                                 Brown Taekwondo
                             </Typography>
                             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                                <Button key="Home"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
-                                    Home
-                                </Button>
-                                <Button key="Gallery"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
-                                    Gallery
-                                </Button>
+                                <NavLink to={"/btkd-site-redesign"} style={{textDecoration: 'none'}}>
+                                    <Button key="Home"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
+                                        Home
+                                    </Button>
+                                </NavLink>
+                                <NavLink to={"/Gallery"} style={{textDecoration: 'none'}}>
+                                    <Button key="Gallery"  onClick={() => {console.log("hello!")}} sx={{ color: '#fff' }}>
+                                        Gallery
+                                    </Button>
+                                </NavLink>
                                 <Button
                                     sx={{ color: '#fff' }}
                                     id="dropdownButton"
@@ -130,14 +135,18 @@ function NavBar (props) {
                             {
                                 <div className="menuDrawer">
                                     <div id={"drawerButtons"}>
-                                        <Button key="Home"  onClick={() => {console.log("hello!")}}
-                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
-                                            Home
-                                        </Button>
-                                        <Button key="Gallery" onClick={() => {console.log("hello!")}}
-                                                sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
-                                            Gallery
-                                        </Button>
+                                        <NavLink to={"/btkd-site-redesign"} style={{textDecoration: 'none'}}>
+                                            <Button key="Home"  onClick={() => {console.log("hello!")}}
+                                                    sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
+                                                Home
+                                            </Button>
+                                        </NavLink>
+                                        <NavLink to={"/Gallery"} style={{textDecoration: 'none'}}>
+                                            <Button key="Gallery" onClick={() => {console.log("hello!")}}
+                                                    sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}>
+                                                Gallery
+                                            </Button>
+                                        </NavLink>
                                         <Button
                                             sx={{ color: '#fff', background: "rgba(0,0,0,0)", '&:hover' :  {background: "#000", color: "#fff"}}}
                                             id="dropdownButton"
