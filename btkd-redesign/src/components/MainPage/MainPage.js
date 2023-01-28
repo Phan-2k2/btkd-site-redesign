@@ -1,5 +1,4 @@
 import './MainPage.css';
-import NavBar from "./NavBar/NavBar";
 import AboutArea from "./AboutArea/AboutArea";
 import AnnouncementsArea from "./ProjectsArea/AnnouncementsArea";
 import ContactArea from "./ContactArea/ContactArea";
@@ -33,10 +32,8 @@ class announcement {
     }
 }
 
-function MainPage() {
-    const navbarRef = useRef();
-    const titleRef = useRef();
-    const isVisibleTitle = useIsVisible(titleRef);
+function MainPage(props) {
+
     const aboutRef = useRef();
     const isVisibleAbout = useIsVisible(aboutRef);
     const announcementsRef = useRef();
@@ -92,8 +89,7 @@ function MainPage() {
 
   return (
     <div className="App">
-        <NavBar navbarRef={navbarRef} titleVisible={isVisibleTitle}/>
-        <TitleArea titleRef={titleRef} isVisible={isVisibleTitle}/>
+        <TitleArea titleRef={props.titleRef} isVisible={props.isVisibleTitle}/>
         <AboutArea aboutRef={aboutRef} isVisible={isVisibleAbout}/>
         <hr/>
         <AnnouncementsArea announcementsRef={announcementsRef} isVisible={isVisibleAnnouncements}
